@@ -4,7 +4,6 @@ const { ProductsService } = require('../src/ProductsService');
 
 // WHEN TESTING ASYNC FUNCTION
 it.skip('should return empty list if no products',  async () => {
-    // DEMO
 
     let productsService = new ProductsService();
 

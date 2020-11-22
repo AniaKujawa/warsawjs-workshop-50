@@ -5,7 +5,6 @@ const { pricesCalculator } = require('../src/price-calculator');
 
 describe.skip('totalPriceForProducts', () => {
     it('should return 0 when no products', () => {
-        // DEMO
         // GIVEN
         const products = [];
 
@@ -17,8 +16,7 @@ describe.skip('totalPriceForProducts', () => {
     });
 
     it('should return sum for all products when single count of each', () => {
-        // DEMO
-        const products = [{ price: 10, count: 1}, { price: 30, count: 1 }];
+        const products = [{ price: 10, count: 1 }, { price: 30, count: 1 }];
 
         const totalPrice = pricesCalculator().totalPriceForProducts(products);
 
@@ -26,7 +24,11 @@ describe.skip('totalPriceForProducts', () => {
         });
 
     it('should return sum for all products when more then single count', () => {
-        // DEMO
+        const products = [{ price: 10, count: 3 }, { price: 30, count: 2 }];
+
+        const totalPrice = pricesCalculator().totalPriceForProducts(products);
+
+        expect(totalPrice).toEqual(90);
     });
 });
 
